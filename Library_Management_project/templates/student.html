@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student</title>
+</head>
+<body>
+<h2 align="center">ENTER LOGIN DETAILS</h2>
+<form method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+        <td>UserName</td>
+        <td><input type="text" name="txtUserName"></td>
+    </tr>
+        <tr>
+        <td>UserEmail</td>
+        <td><input type="email" name="txtUserEmail"></td>
+    </tr>
+     <tr>
+        <td>UserPhno</td>
+        <td><input type="number" name="txtUserPhno"></td>
+    </tr>
+     <tr>
+        <td>UserSemister</td>
+        <td><input type="number" name="txtUserSemister"></td>
+    </tr>
+    <tr>
+        <td>UserPassword</td>
+        <td><input type="password" name="txtUserPassword"></td>
+    </tr>
+    <tr>
+        <td>UserCourse</td>
+        <td><select name="ddlcourse">
+            {% for i in data %}
+            <option>{{ i.Course_Name }}</option>
+            {% endfor %}
+        </select></td>
+    </tr>
+     <tr>
+        <td><input type="submit" name="btnsub" value="Register"></td>
+
+    </tr>
+    </table>
+</form>
+</body>
+</html>

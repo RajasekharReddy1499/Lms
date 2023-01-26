@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+</head>
+<body>
+<h2 align="center">ENTER Rigister DETAILS</h2>
+<form action="logdata" method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+        <td>UserName</td>
+        <td><input type="text" name="txtUserName"></td>
+    </tr>
+     <tr>
+        <td>UserPassword</td>
+        <td><input type="password" name="txtUserPassword"></td>
+    </tr>
+     <tr>
+        <td>UserEmail</td>
+        <td><input type="email" name="txtUserEmail"></td>
+    </tr>
+     <tr>
+        <td><input type="submit" name="btnsub" value="registeration"></td>
+
+    </tr>
+    </table>
+</form>
+</body>
+</html>
